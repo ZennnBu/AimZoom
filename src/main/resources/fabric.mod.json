@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "aimzoom",
+  "version": "${version}",
+  "name": "AimZoom",
+  "description": "A lightweight zoom mod for Minecraft Java.",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.aimzoom.AimZoomClient"
+    ]
+  },
+  "mixins": [
+    "aimzoom.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.0",
+    "minecraft": "26.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
