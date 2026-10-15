@@ -1,1 +1,30 @@
+name: Build AimZoom
+
+'on':
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '25'
+
+      - name: Build mod
+        run: gradle build --no-daemon
+
+      - name: Upload build files
+        uses: actions/upload-artifact@v4
+        with:
+          name: AimZoom-build
+          path: build/libs/*.jar
 
