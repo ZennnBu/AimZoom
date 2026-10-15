@@ -1,8 +1,8 @@
 package com.aimzoom.mixin;
 
-import net.minecraft.client.renderer.GameRenderer;
+import net.minecraft.client.Camera;
 import org.spongepowered.asm.mixin.Mixin;
 
-@Mixin(GameRenderer.class)
+@Mixin(Camera.class)
 public abstract class GameRendererMixin {
 }
